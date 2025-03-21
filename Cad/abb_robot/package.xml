@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>abb_robot</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="yahiaraouf@todo.todo">yahiaraouf</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- Publishes joint states for robot visualization -->
+  <exec_depend>joint_state_publisher</exec_depend>
+  
+  <!-- Publishes robot state to the TF tree -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  
+  <!-- Visualization tool for robot models and sensor data -->
+  <exec_depend>rviz</exec_depend>
+  
+  <!-- Manages controllers for ROS 2 control -->
+  <depend>controller_manager</depend>
+  
+  <!-- Provides controllers for grippers -->
+  <depend>gripper_controllers</depend>
+  
+  <!-- Integrates ROS 2 control with Gazebo -->
+  <depend>gz_ros2_control</depend>
+  
+  <!-- Python library for numerical computations -->
+  <depend>python3-numpy</depend>
+  
+  <!-- C++ client library for ROS 2 -->
+  <depend>rclcpp</depend>
+  
+  <!-- Integration between ROS 2 and Gazebo -->
+  <depend>ros_gz</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_image</depend>
+  <depend>ros_gz_sim</depend>
+  
+  <!-- ROS 2 control framework for hardware interfaces -->
+  <depend>ros2_control</depend>
+  
+  <!-- Standard controllers for ROS 2 control -->
+  <depend>ros2_controllers</depend>
+  
+  <!-- Message type for representing trajectories -->
+  <depend>trajectory_msgs</depend>
+  
+  <!-- Tool for generating URDF files using XML macros -->
+  <depend>xacro</depend>
+  
+  <!-- Gazebo demos for ROS 2 control integration -->
+  <exec_depend>gz_ros2_control_demos</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
