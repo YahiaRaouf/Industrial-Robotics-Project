@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Gripper_assy">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00260207024023967 -0.0296703821312808 -0.0164693944942808"
+        rpy="0 0 0" />
+      <mass
+        value="0.00236245358845557" />
+      <inertia
+        ixx="8.91646425994972E-08"
+        ixy="-6.99757222434336E-10"
+        ixz="-5.22588542233713E-10"
+        iyy="6.00365856567188E-08"
+        iyz="-2.17708922441049E-08"
+        izz="7.29189451269679E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_assy/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_assy/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="finger1">
+    <inertial>
+      <origin
+        xyz="0.00034963270764244 0.00494100184607932 0.0133207852710216"
+        rpy="0 0 0" />
+      <mass
+        value="0.00355871364944461" />
+      <inertia
+        ixx="1.87897152848441E-07"
+        ixy="4.9592413294708E-08"
+        ixz="2.67501429016142E-08"
+        iyy="1.80391168997213E-07"
+        iyz="-5.45921369856547E-08"
+        izz="2.16372621521956E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_assy/meshes/finger1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_assy/meshes/finger1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger1"
+    type="prismatic">
+    <origin
+      xyz="0.01539 0.0016204 0.010189"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="finger1" />
+    <axis
+      xyz="0.019197 0.801 -0.59836" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="finger2">
+    <inertial>
+      <origin
+        xyz="-0.000503434373639033 -0.01135887013939 0.00852634242278859"
+        rpy="0 0 0" />
+      <mass
+        value="0.00355873304715105" />
+      <inertia
+        ixx="1.86157705173348E-07"
+        ixy="1.41428298827634E-08"
+        ixz="-5.47512626440136E-08"
+        iyy="2.42379602392971E-07"
+        iyz="3.74130954548628E-08"
+        izz="1.56110065667142E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_assy/meshes/finger2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Gripper_assy/meshes/finger2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger2"
+    type="prismatic">
+    <origin
+      xyz="0.015046 -0.012729 -0.0005306"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="finger2" />
+    <axis
+      xyz="-0.81458 -0.33448 0.47389" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

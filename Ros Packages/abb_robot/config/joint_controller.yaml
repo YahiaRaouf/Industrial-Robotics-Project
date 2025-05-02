@@ -1,0 +1,51 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 # Hz
+    arm_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    hand_group_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_group_controller:
+  ros__parameters:
+    joints:
+      - joint1_21P0041_21P0240
+      - joint2_21P0041_21P0240
+      - joint3_21P0041_21P0240
+      - joint4_21P0041_21P0240
+      - joint5_21P0041_21P0240
+      - joint6_21P0041_21P0240
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_nonzero_velocity_at_trajectory_end: true
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    open_loop_control: true
+    constraints:
+      stopped_velocity_tolerance: 0.01
+      goal_time: 0.0
+      joint1:
+        trajectory: 0.05
+        goal: 0.03
+
+hand_group_controller:
+  ros__parameters:
+    joints:
+      - joint7_21P0041_21P0240
+      - joint8_21P0041_21P0240
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_nonzero_velocity_at_trajectory_end: true
+    gains:
+      joint7: { p: 500.0, i: 10.0, d: 10.0 }
+      joint8: { p: 500.0, i: 10.0, d: 10.0 }
