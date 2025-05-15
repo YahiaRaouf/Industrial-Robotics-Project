@@ -1,0 +1,11 @@
+# Default initial positions for abb_robot's ros2_control fake system
+
+initial_positions:
+  joint1_21P0041_21P0240: 0.0
+  joint2_21P0041_21P0240: 0.0
+  joint3_21P0041_21P0240: 0.0
+  joint4_21P0041_21P0240: 0.0
+  joint5_21P0041_21P0240: 0.0
+  joint6_21P0041_21P0240: 0.0
+  joint7_21P0041_21P0240: 0.0
+  joint8_21P0041_21P0240: 0.0
